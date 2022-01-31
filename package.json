@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.2.0"
   },
   "name": "employee-tracker",
   "description": "my SQL employee tracker\r ## Your Task",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
