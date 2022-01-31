@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "console.table": "^0.10.0",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "mysql2": "^2.3.3"
   },
   "name": "employee-tracker",
   "description": "my SQL employee tracker\r ## Your Task",
