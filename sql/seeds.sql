@@ -10,4 +10,6 @@ insert into roles (title, salary,department_id)
 
 
 insert into employee_table (first_name, last_name, role_id,manager_id)
-    values()
+    values('Jack', 'Black',1, null)
+    ('The', 'Dude',1, null),
+    ('Some','Body',2, 1)
