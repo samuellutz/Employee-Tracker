@@ -1,9 +1,8 @@
 const mysql = require("mysql2");
 const inquirer = require("inquirer");
-const cTable = require("console.table");
+require("console.table");
 const adddept = require('./adddept')
 const addrole = require('./addrole')
-
 mysql.createConnection(
   {
       host: 'localhost',
@@ -11,14 +10,14 @@ mysql.createConnection(
       password:'password',
       database:'employee_db'
   },
-).connection(function (err) {
+)
+.connection(function (err) {
     if (err) {
       console.log(err);
       return;
     }
     console.log("Connected!");
   
-    // DO STUFF HERE IN THE CALLBACK TO GUARANTEE THAT YOU'VE CONNECTED BEFORE MAKING ANY SQL QUERIES
   });
 
 const question = [
@@ -29,7 +28,7 @@ const question = [
     name: 'choice'
   }
 ];
-
+// init function to make choices available
 function init() {
   inquirer
   .prompt(question)
@@ -66,6 +65,9 @@ function init() {
         case 'Add a role':
 
         addrole();
+            break;
+        case 'Add a employee':
+
             break;
         case 'Update an employee':
 
