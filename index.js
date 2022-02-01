@@ -7,17 +7,17 @@ mysql.createConnection(
   {
       host: 'localhost',
       user:'root',
-      password:'password',
+      password:'',
       database:'employee_db'
   },
 )
-.connection(function (err) {
+.connect(function (err) {
     if (err) {
       console.log(err);
       return;
     }
     console.log("Connected!");
-  
+    init();
   });
 
 const question = [
@@ -76,4 +76,3 @@ function init() {
     })
     .catch (err => console.log(err));
 }
-init();
