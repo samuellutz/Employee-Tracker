@@ -20,7 +20,7 @@ const question = [
     choices: ['view all departments', 'view all roles', 'view all employees', 'add department', 'add a role', 'add an employee', 'update an employee'],
     name: 'choice'
   }
-]
+];
 
 function init() {
   inquirer
@@ -53,9 +53,14 @@ function init() {
             break;
         case 'Add a department':
 
-            addDept();
+            adddept();
+            break;
+        case 'add a role':
+
+        addrole();
             break;
         }
     })
+    .catch (err => console.log(err));
 }
 module.exports = init
