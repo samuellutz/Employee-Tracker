@@ -3,12 +3,13 @@ const inquirer = require("inquirer");
 const cTable = require("console.table");
 const adddept = require('./adddept')
 const addrole = require('./addrole')
+
 mysql.createConnection(
   {
-    //   host: 'localhost',
-    //   user:'root',
-    //   password:'password',
-    //   database:'employee_db'
+      host: 'localhost',
+      user:'root',
+      password:'password',
+      database:'employee_db'
   },
 ).connection(function (err) {
     if (err) {
