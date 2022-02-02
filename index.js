@@ -2,6 +2,7 @@ const mysql = require("mysql2");
 const inquirer = require("inquirer");
 require("console.table");
 const adddept = require('./adddept')
+const updateEmp = require('./updateemp')
 const addrole = require('./addrole')
 const db = mysql.createConnection(
   {
