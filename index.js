@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 require("console.table");
 const adddept = require('./adddept')
 const addrole = require('./addrole')
-mysql.createConnection(
+const db = mysql.createConnection(
   {
       host: 'localhost',
       user:'root',
