@@ -19,7 +19,13 @@ After populating the data, you will need to add your MySQL password to the serve
 
 Once this has been completed, you are ready to use the application!
 
+![image](https://user-images.githubusercontent.com/91674571/152395510-cfde8e1d-462f-4448-bac9-b30e7cd7b21b.png)
 
+![image](https://user-images.githubusercontent.com/91674571/152395577-5e94cb6b-be37-40b1-ade1-30ae846ebaef.png)
+
+![image](https://user-images.githubusercontent.com/91674571/152395665-1d3ece8a-4062-4f00-a230-5112a4a034c3.png)
+
+[Link to Video](https://watch.screencastify.com/v/BXugyt40IXIvb6eiTKjs)
 
 ## Built With
 
