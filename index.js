@@ -5,25 +5,25 @@ const adddept = require('./adddept')
 const updateemp = require('./updateemp')
 const addrole = require('./addrole')
 const addemp = require('./addemp');
-
+const db = require('./connection')
 
 // connection to the mysql
-const db = mysql.createConnection(
-  {
-      host: 'localhost',
-      user:'root',
-      password:'password',
-      database:'employee_db'
-  },
-)
-db.connect(function (err) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-    console.log("Connected!");
+// const db = mysql.createConnection(
+//   {
+//       host: 'localhost',
+//       user:'root',
+//       password:'password',
+//       database:'employee_db'
+//   },
+// )
+// db.connect(function (err) {
+//     if (err) {
+//       console.log(err);
+//       return;
+//     }
+//     console.log("Connected!");
   
-  });
+//   });
 // question selector
 const question = [
   {

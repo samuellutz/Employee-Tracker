@@ -1,6 +1,8 @@
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
 require('console.table');
+const db = require('./connection')
+
 const questions = [
     {
         type: 'input',
@@ -13,13 +15,13 @@ const questions = [
         name:'role_id'
     }]
 
-const db = mysql.createConnection(
-    {
-        host: 'localhost',
-        user:'root',
-        password:'password',
-        database:'employee_db'
-    })
+// const db = mysql.createConnection(
+//     {
+//         host: 'localhost',
+//         user:'root',
+//         password:'password',
+//         database:'employee_db'
+//     })
 
 function updateemp(){
     inquirer
