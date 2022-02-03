@@ -25,6 +25,7 @@ Once this has been completed, you are ready to use the application!
 
 ![image](https://user-images.githubusercontent.com/91674571/152395665-1d3ece8a-4062-4f00-a230-5112a4a034c3.png)
 
+[Link to Video](https://watch.screencastify.com/v/BXugyt40IXIvb6eiTKjs)
 
 ## Built With
 
