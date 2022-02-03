@@ -3,24 +3,21 @@ create database employee_db;
 
 use employee_db
 
-drop table if exists department;
-create database department(
+create table department(
     id int not null auto_increment primary key,
     name varchar(30) not null
 );
 
-drop table if exists roles;
 create table roles(
     id int not null auto_increment primary key,
     title varchar(30)not null,
-    salary decimal(10.2) not null,
-    department_id int.
+    salary decimal(10,2) not null,
+    department_id int,
     foreign key (department_id)
     references department(id)
     on delete set null
 );
 
-drop table if exists employee table
 create table employee_table (
     id int not null auto_increment primary key,
     first_name varchar(30) not null,

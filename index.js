@@ -2,8 +2,10 @@ const mysql = require("mysql2");
 const inquirer = require("inquirer");
 require("console.table");
 const adddept = require('./adddept')
-const updateEmp = require('./updateemp')
+const updateemp = require('./updateemp')
 const addrole = require('./addrole')
+// const addemp = require('./addemp');
+// connection to the mysql
 const db = mysql.createConnection(
   {
       host: 'localhost',
@@ -18,9 +20,9 @@ const db = mysql.createConnection(
       return;
     }
     console.log("Connected!");
-    init();
+  
   });
-
+// question selector
 const question = [
   {
     type:'list',
@@ -29,7 +31,7 @@ const question = [
     name: 'choice'
   }
 ];
-// init function to make choices available
+// init function to make choices available to go to.
 function init() {
   inquirer
   .prompt(question)
@@ -65,15 +67,18 @@ function init() {
             break;
         case 'Add a role':
 
-        addrole();
+            addrole();
             break;
         case 'Add a employee':
 
+            // addemp()
             break;
         case 'Update an employee':
-
+            
+            updateemp()
             break;
         }
     })
     .catch (err => console.log(err));
 }
+init();
