@@ -28,6 +28,6 @@ create table employee_table (
     on delete set null,
     manager_id int,
     foreign key ( manager_id)
-    references employee_table(id)
+    references employee_table (id)
     on delete set null
 );

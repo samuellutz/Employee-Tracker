@@ -32,7 +32,7 @@ function adddept(){
                 });
             }
         })
-
-    })}
+    });
+return}
 
     module.exports = adddept;

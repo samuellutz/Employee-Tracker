@@ -4,7 +4,9 @@ require("console.table");
 const adddept = require('./adddept')
 const updateemp = require('./updateemp')
 const addrole = require('./addrole')
-// const addemp = require('./addemp');
+const addemp = require('./addemp');
+
+
 // connection to the mysql
 const db = mysql.createConnection(
   {
@@ -43,6 +45,7 @@ function init() {
                     console.log(err);
                 }
                 console.table(result)
+                init()
             });
             break;
         case 'View all roles':
@@ -51,14 +54,16 @@ function init() {
                     console.log(err);
                 }
                 console.table(result)
+                init()
             });
             break;
         case 'View all employees':
-            db.query('SELECT * FROM employee;', (err, result)=> {
+            db.query('SELECT * FROM employee_table;', (err, result)=> {
                 if (err) {
                     console.log(err);
                 }
                 console.table(result)
+                init()
             });
             break;
         case 'Add department':
@@ -69,9 +74,9 @@ function init() {
 
             addrole();
             break;
-        case 'Add a employee':
+        case 'Add an employee':
 
-            // addemp()
+            addemp()
             break;
         case 'Update an employee':
             

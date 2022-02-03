@@ -29,7 +29,7 @@ const db = mysql.createConnection(
 function addrole() {
     inquirer.prompt(question)
     .then(response => {
-        db.query(`instert into roles (title, salary, department_id) values ('${response.name}','${response.salary}','${response.dept_id}')`, (err, result) => {
+        db.query(`insert into roles (title, salary, department_id) values ('${response.name}','${response.salary}','${response.dept_id}')`, (err, result) => {
             if (err) {
                 console.log(err);
             }
@@ -43,6 +43,7 @@ function addrole() {
             }
         })
     })
+    return(init)
 }
 
 module.exports = addrole;
