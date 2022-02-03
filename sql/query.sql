@@ -1,3 +1,5 @@
-SELECT e.id, e.first_name, e.last_name, r.id, r.salary, d.department
-from (employee_db e join employee_table on roles = r.salary)
-    join department d on 
+SELECT employee_table.id, employee_table.first_name, employee_table.last_name, roles.title, roles.salary, department.name, mang.first_name as manager_name
+from employee_table
+left join roles on employee_table.role_id = roles.id
+left join department on roles.department_id = department.id
+left join employee_table as mang on employee_table.manager_id = mang.id;
