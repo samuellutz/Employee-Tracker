@@ -8,9 +8,6 @@ A node use application for adding, viewing, and making adjustments to a business
 1. mySql
 2. node
 
-```
-Give examples
-```
 
 ### Installing
 
