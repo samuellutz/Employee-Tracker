@@ -14,7 +14,7 @@ const db = mysql.createConnection(
       database:'employee_db'
   },
 )
-.connect(function (err) {
+db.connect(function (err) {
     if (err) {
       console.log(err);
       return;
@@ -38,7 +38,7 @@ function init() {
   .then(response => {
     switch (response.choice) {
         case 'View all departments':
-            db.query('SELECT * FROM department;', (err, result)=> {
+            db.query('SELECT * FROM department', (err, result)=> {
                 if (err) {
                     console.log(err);
                 }
@@ -46,7 +46,7 @@ function init() {
             });
             break;
         case 'View all roles':
-            db.query('SELECT * FROM roles;', (err, result)=> {
+            db.query('SELECT * FROM roles', (err, result)=> {
                 if (err) {
                     console.log(err);
                 }
@@ -61,7 +61,7 @@ function init() {
                 console.table(result)
             });
             break;
-        case 'Add a department':
+        case 'Add department':
 
             adddept();
             break;
