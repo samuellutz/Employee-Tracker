@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 require('console.table')
 const db = require('./connection')
 
-function adddept(){
+function adddept(func){
     console.log('yay')
     inquirer.prompt({
         type: 'input',
@@ -25,7 +25,7 @@ function adddept(){
                 });
             }
         })
-    });
-return}
+    })
+.then(func)}
 
     module.exports = adddept;

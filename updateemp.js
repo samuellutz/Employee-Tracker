@@ -15,7 +15,7 @@ const questions = [
         name:'role_id'
     }]
 
-function updateemp(){
+function updateemp(func){
     inquirer
     .prompt(questions)
     .then(response=>{
@@ -33,6 +33,7 @@ function updateemp(){
             }
         })
     })
+    .then(func)
 }
 
 module.exports = updateemp 

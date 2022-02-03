@@ -51,22 +51,24 @@ function init() {
             break;
         case 'Add department':
 
-            adddept();
+            adddept(init);
+            
             break;
         case 'Add a role':
 
-            addrole();
+            addrole(init);
             break;
         case 'Add an employee':
 
-            addemp()
+            addemp(init)
             break;
         case 'Update an employee':
             
-            updateemp()
+            updateemp(init)
             break;
         }
     })
     .catch (err => console.log(err));
 }
 init();
+

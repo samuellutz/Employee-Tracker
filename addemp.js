@@ -25,7 +25,7 @@ const questions = [
     }
 ];
 
-function addemp(callback){
+function addemp(func){
     inquirer.prompt(questions)
     .then(response=>{
         db.query(`INSERT INTO employee_table (first_name, last_name, role_id, manager_id) VALUES ('${response.first_name}','${response.last_name}','${response.role_id}','${response.manager_id}')`, (err, result)=>{
@@ -39,10 +39,10 @@ function addemp(callback){
                         console.log(err);
                     }
                     console.table(result)
-                    // callback()
+                   
                 });
             }
         })
-
-    })}
+        
+    }).then(func)}
 module.exports = addemp;

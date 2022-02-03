@@ -19,7 +19,7 @@ const question = [
     }
 ];
 
-function addrole() {
+function addrole(func) {
     inquirer.prompt(question)
     .then(response => {
         db.query(`insert into roles (title, salary, department_id) values ('${response.name}','${response.salary}','${response.dept_id}')`, (err, result) => {
@@ -36,7 +36,7 @@ function addrole() {
             }
         })
     })
-    return(init)
+    .then(func)
 }
 
 module.exports = addrole;
