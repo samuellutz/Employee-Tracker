@@ -15,14 +15,6 @@ const questions = [
         name:'role_id'
     }]
 
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user:'root',
-//         password:'password',
-//         database:'employee_db'
-//     })
-
 function updateemp(){
     inquirer
     .prompt(questions)

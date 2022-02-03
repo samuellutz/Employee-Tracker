@@ -18,14 +18,6 @@ const question = [
         name: 'dept_id'
     }
 ];
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user:'root',
-//         password:'password',
-//         database:'employee_db'
-//     }
-// )
 
 function addrole() {
     inquirer.prompt(question)

@@ -2,14 +2,6 @@ const mysql = require('mysql2');
 const inquirer = require('inquirer');
 require('console.table')
 const db = require('./connection')
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user:'root',
-//         password:'password',
-//         database:'employee_db'
-//     }
-// )
 
 function adddept(){
     console.log('yay')

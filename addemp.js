@@ -24,13 +24,6 @@ const questions = [
         name:'manager_id'
     }
 ];
-// const db = mysql.createConnection(
-//     {
-//         host: 'localhost',
-//         user:'root',
-//         password:'password',
-//         database:'employee_db'
-//     })
 
 function addemp(callback){
     inquirer.prompt(questions)
